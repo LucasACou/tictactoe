@@ -58,17 +58,9 @@ int main()
   
   } while (x != 1);
 
+  
   do {
     system("clear");
-
-    if (jogadas == 1){
-      tabuleiro[linha][coluna] = 'x';   //player1
-      jogadas = 0;
-    }
-    else if (jogadas == 0){
-      tabuleiro[linha][coluna] = 'o';  //player 2
-    }
-    
     
     printf(color_red "    0   1   2\n" color_reset);
     printf("  ▄▄▄▄▄▄▄▄▄▄▄▄▄\n");
@@ -81,6 +73,16 @@ int main()
 
     printf("\nEscolha as casas pra jogar:");
     scanf("%d %d", &linha , &coluna);
+  
+    if (jogadas == 1){
+      tabuleiro[linha][coluna] = 'x';   //player1
+      jogadas = 0;
+    }
+    else if (jogadas == 0){
+      tabuleiro[linha][coluna] = 'o';  //player 2
+      jogadas = 1;
+    }
+    
   } while(fim_de_jogo == 0);
   
   
