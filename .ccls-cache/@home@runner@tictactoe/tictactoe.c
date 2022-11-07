@@ -19,6 +19,8 @@ int main()
   };
 
   system("clear");
+
+  //arte do menu
   
   printf(color_purple "██████████  ██  ████████\n");
   printf("    ██      ██  ██\n");
@@ -44,16 +46,26 @@ int main()
   int x = 0;
 
   do {
-    printf("MENU\n");
+    printf("\n");
     printf("[1] - Jogar\n");
-    printf("[2] - Opções\n");
+    printf("[2] - Creditos\n");
     scanf("%d", &x);
 
     if(x == 2){
-      printf("opções\n");
+      system ("clear");
+      printf("####################################\n");
+      printf("|                                  |\n");
+      printf("|          TICTACTOE IN C          |\n");
+      printf("|                                  |\n");
+      printf("|                By                |\n");
+      printf("|                                  |\n");
+      printf("|         -Lucas Assunção          |\n");
+      printf("|         -Lucas Calabresi         |\n");
+      printf("|                                  |\n");
+      printf("####################################\n");
     }
     else {
-      puts("erro!");
+      puts(color_red"\nERRO!"color_reset);
     }
   
   } while (x != 1);
@@ -61,6 +73,8 @@ int main()
   
   do {
     system("clear");
+
+    //tabuleiro
     
     printf(color_red "    0   1   2\n" color_reset);
     printf("  ▄▄▄▄▄▄▄▄▄▄▄▄▄\n");
@@ -72,20 +86,90 @@ int main()
     printf("  █▄▄▄█▄▄▄█▄▄▄█\n");
 
     printf("\nEscolha as casas pra jogar:");
-    scanf("%d %d", &linha , &coluna);
-  
+
+    do {
+      scanf("%d %d", &linha , &coluna);
+    if(tabuleiro[linha][coluna] == 'x' || tabuleiro[linha][coluna] == 'o') {
+      printf("\nCasa ja ocupada, escolha outra casa:");
+    }
+    }while (tabuleiro[linha][coluna] == 'x' || tabuleiro[linha][coluna] == 'o');
+      
+
+    //player1
+    
     if (jogadas == 1){
-      tabuleiro[linha][coluna] = 'x';   //player1
+      tabuleiro[linha][coluna] = 'x';
       jogadas = 0;
     }
+
+    //player 2
+      
     else if (jogadas == 0){
-      tabuleiro[linha][coluna] = 'o';  //player 2
+      tabuleiro[linha][coluna] = 'o';
       jogadas = 1;
+    }
+
+
+
+    
+    if(tabuleiro[0][0]=='x' && tabuleiro[0][1]== 'x' && tabuleiro[0][2] == 'x'){
+      fim_de_jogo = 1;
+    printf("X ganhou\n");
+    }else if(tabuleiro[1][0]=='x' && tabuleiro[1][1]== 'x' && tabuleiro[1][2] == 'x'){
+      fim_de_jogo = 1;
+    printf("X ganhou\n");
+    }else if(tabuleiro[2][0]=='x' && tabuleiro[2][1]== 'x' && tabuleiro[2][2] == 'x'){
+      fim_de_jogo = 1;
+    printf("X ganhou\n");
+      
+    }else if(tabuleiro[0][0]=='x' && tabuleiro[1][0]== 'x' && tabuleiro[2][0] == 'x'){
+      fim_de_jogo = 1;
+    printf("X ganhou\n");
+    }else if(tabuleiro[0][1]=='x' && tabuleiro[1][1]== 'x' && tabuleiro[2][1] == 'x'){
+      fim_de_jogo = 1;
+    printf("X ganhou\n");
+    }else if(tabuleiro[0][2]=='x' && tabuleiro[1][2]== 'x' && tabuleiro[2][2] == 'x'){
+      fim_de_jogo = 1;
+    printf("X ganhou\n");
+      
+    }else if(tabuleiro[0][0]=='x' && tabuleiro[1][1]== 'x' && tabuleiro[2][2] == 'x'){
+      fim_de_jogo = 1;
+    printf("X ganhou\n");
+    }else if(tabuleiro[0][2]=='x' && tabuleiro[1][1]== 'x' && tabuleiro[2][0] == 'x'){
+      fim_de_jogo = 1;
+    printf("X ganhou\n");
+    }
+
+    if(tabuleiro[0][0]=='o' && tabuleiro[0][1]== 'o' && tabuleiro[0][2] == 'o'){
+      fim_de_jogo = 1;
+    printf("O ganhou\n");
+    }else if(tabuleiro[1][0]=='o' && tabuleiro[1][1]== 'o' && tabuleiro[1][2] == 'o'){
+      fim_de_jogo = 1;
+    printf("O ganhou\n");
+    }else if(tabuleiro[2][0]=='o' && tabuleiro[2][1]== 'o' && tabuleiro[2][2] == 'o'){
+      fim_de_jogo = 1;
+    printf("O ganhou\n");
+      
+    }else if(tabuleiro[0][0]=='o' && tabuleiro[1][0]== 'o' && tabuleiro[2][0] == 'o'){
+      fim_de_jogo = 1;
+    printf("O ganhou\n");
+    }else if(tabuleiro[0][1]=='o' && tabuleiro[1][1]== 'o' && tabuleiro[2][1] == 'o'){
+      fim_de_jogo = 1;
+    printf("O ganhou\n");
+    }else if(tabuleiro[0][2]=='o' && tabuleiro[1][2]== 'o' && tabuleiro[2][2] == 'o'){ 
+      fim_de_jogo = 1;
+    printf("O ganhou\n");
+      
+    }else if(tabuleiro[0][0]=='o' && tabuleiro[1][1]== 'o' && tabuleiro[2][2] == 'o'){
+      fim_de_jogo = 1;
+    printf("O ganhou\n");
+    }else if(tabuleiro[0][2]=='o' && tabuleiro[1][1]== 'o' && tabuleiro[2][0] == 'o'){
+      fim_de_jogo = 1;
+    printf("O ganhou\n");
     }
     
   } while(fim_de_jogo == 0);
-  
-  
+
   
   return 0;
 }
