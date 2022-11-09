@@ -43,15 +43,15 @@ int main()
   printf("    ██      ██████  ████████\n" color_reset);
   printf("\n");
 
-  int x = 0;
+  int menu_principal = 0;
 
   do {
     printf("\n");
     printf("[1] - Jogar\n");
     printf("[2] - Creditos\n");
-    scanf("%d", &x);
+    scanf("%d", &menu_principal);
 
-    if(x == 2){
+    if(menu_principal == 2){
       system ("clear");
       printf("####################################\n");
       printf("|                                  |\n");
@@ -68,10 +68,21 @@ int main()
       puts(color_red"\nERRO!"color_reset);
     }
   
-  } while (x != 1);
+  } while (menu_principal != 1);
 
   
-  do {
+  int menu_dificuldade;
+  
+  system ("clear");
+  printf("\n");
+  printf("[1] - Easy\n");
+  printf("[2] - Normal\n");
+  printf("[3] - Hard\n");
+  scanf("%d", &menu_dificuldade);
+
+  switch(menu_dificuldade){
+    case 1:
+      do {
     system("clear");
 
     //tabuleiro
@@ -167,8 +178,35 @@ int main()
       fim_de_jogo = 1;
     printf("O ganhou\n");
     }
+        int velha = 1;
+    else(tabuleiro = ' '){
+      for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+         
+
+        }
+          }
+
+
+
+      
+    }
+      
+        
     
   } while(fim_de_jogo == 0);
+    break;
+    case 2:
+      printf("hello world");
+    break;
+    case 3:
+      printf("ola world");
+    break;
+    default:
+      printf("opção inválida");
+    break;
+    
+  }
 
   
   return 0;
