@@ -75,9 +75,9 @@ int main()
   
   system ("clear");
   printf("\n");
-  printf("[1] - 3x3\n");
-  printf("[2] - 4x4\n");
-  printf("[3] - 5x5\n");
+  printf("[1] - Easy\n");
+  printf("[2] - Normal\n");
+  printf("[3] - Hard\n");
   scanf("%d", &menu_dificuldade);
 
   switch(menu_dificuldade){
@@ -97,20 +97,14 @@ int main()
     printf("  █▄▄▄█▄▄▄█▄▄▄█\n");
 
     printf("\nEscolha as casas pra jogar:");
-    
-    do {
-      int casa_jogada;
-      scanf("%d", &casa_jogada);
-        casa_jogada = casa_jogada - 1;
-        linha = casa_jogada/3;
-        coluna = casa_jogada%3;
-      
-      if(tabuleiro[linha][coluna] == 'x' || tabuleiro[linha][coluna] == 'o') {
-        printf("\nCasa ja ocupada, escolha outra casa:");
-      }
-    }while (tabuleiro[linha][coluna] == 'x' || tabuleiro[linha][coluna] == 'o');
 
-    
+    do {
+      scanf("%d %d", &linha , &coluna);
+    if(tabuleiro[linha][coluna] == 'x' || tabuleiro[linha][coluna] == 'o') {
+      printf("\nCasa ja ocupada, escolha outra casa:");
+    }
+    }while (tabuleiro[linha][coluna] == 'x' || tabuleiro[linha][coluna] == 'o');
+      
 
     //player1
     
@@ -184,53 +178,30 @@ int main()
       fim_de_jogo = 1;
     printf("O ganhou\n");
     }
-
-    int todos_preenchidos = 1;
-    
+        int empate = 1;
+    else(tabuleiro = ' '){
       for(int i = 0; i < 3; i++){
         for(int j = 0; j < 3; j++){
-          if(tabuleiro[i][j] == ' ')
-            todos_preenchidos = 0;
+          
+          
+
         }
-      }
-      if(todos_preenchidos == 1 && fim_de_jogo == 0){
-        printf("deu velha");
-        fim_de_jogo = 1;
-      }
+          }
+
+
+
+      
+    }
+      
         
+    
   } while(fim_de_jogo == 0);
     break;
-
-    
     case 2:
-      system("clear");
-      printf("    0   1   2   3  \n");
-      printf("  ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n");
-      printf("0 █ x █ x █ x █ x █\n");
-      printf("  █▄▄▄█▄▄▄█▄▄▄█▄▄▄█\n");
-      printf("1 █ x █ x █ x █ x █\n");
-      printf("  █▄▄▄█▄▄▄█▄▄▄█▄▄▄█\n");
-      printf("2 █ x █ x █ x █ x █\n");
-      printf("  █▄▄▄█▄▄▄█▄▄▄█▄▄▄█\n");
-      printf("3 █ x █ x █ x █ x █\n");
-      printf("  █▄▄▄█▄▄▄█▄▄▄█▄▄▄█\n");
+      printf("hello world");
     break;
-
-    
     case 3:
-      system("clear");
-      printf("    0   1   2   3   4  \n");
-      printf("  ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n");
-      printf("0 █ x █ x █ x █ x █ x █\n");
-      printf("  █▄▄▄█▄▄▄█▄▄▄█▄▄▄█▄▄▄█\n");
-      printf("1 █ x █ x █ x █ x █ x █\n");
-      printf("  █▄▄▄█▄▄▄█▄▄▄█▄▄▄█▄▄▄█\n");
-      printf("2 █ x █ x █ x █ x █ x █\n");
-      printf("  █▄▄▄█▄▄▄█▄▄▄█▄▄▄█▄▄▄█\n");
-      printf("3 █ x █ x █ x █ x █ x █\n");
-      printf("  █▄▄▄█▄▄▄█▄▄▄█▄▄▄█▄▄▄█\n");
-      printf("4 █ x █ x █ x █ x █ x █\n");
-      printf("  █▄▄▄█▄▄▄█▄▄▄█▄▄▄█▄▄▄█\n");
+      printf("ola world");
     break;
     default:
       printf("opção inválida");
