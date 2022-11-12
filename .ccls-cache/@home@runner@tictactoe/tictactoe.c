@@ -87,14 +87,14 @@ int main()
 
     //tabuleiro
     
-    printf(color_red "    0   1   2\n" color_reset);
-    printf("  ▄▄▄▄▄▄▄▄▄▄▄▄▄\n");
-    printf(color_red"0"color_reset" █ %c █ %c █ %c █\n", tabuleiro[0][0], tabuleiro[0][1], tabuleiro[0][2]);
-    printf("  █▄▄▄█▄▄▄█▄▄▄█\n");
-    printf(color_red"1"color_reset" █ %c █ %c █ %c █\n", tabuleiro[1][0], tabuleiro[1][1], tabuleiro[1][2]);
-    printf("  █▄▄▄█▄▄▄█▄▄▄█\n");
-    printf(color_red"2"color_reset" █ %c █ %c █ %c █\n", tabuleiro[2][0], tabuleiro[2][1], tabuleiro[2][2]);
-    printf("  █▄▄▄█▄▄▄█▄▄▄█\n");
+    printf("\n");
+    printf(" ▄▄▄▄▄▄▄▄▄▄▄▄▄\n");
+    printf(" █ %c █ %c █ %c █\n", tabuleiro[0][0], tabuleiro[0][1], tabuleiro[0][2]);
+    printf(" █▄▄▄█▄▄▄█▄▄▄█\n");
+    printf(" █ %c █ %c █ %c █\n", tabuleiro[1][0], tabuleiro[1][1], tabuleiro[1][2]);
+    printf(" █▄▄▄█▄▄▄█▄▄▄█\n");
+    printf(" █ %c █ %c █ %c █\n", tabuleiro[2][0], tabuleiro[2][1], tabuleiro[2][2]);
+    printf(" █▄▄▄█▄▄▄█▄▄▄█\n");
 
     printf("\nEscolha as casas pra jogar:");
     
