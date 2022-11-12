@@ -109,7 +109,7 @@ int main()
     printf(" █ %c █ %c █ %c █\n", tabuleiro[2][0], tabuleiro[2][1], tabuleiro[2][2]);
     printf(" █▄▄▄█▄▄▄█▄▄▄█\n");
 
-    printf("\nEscolha as casas pra jogar:");
+    printf("\nEscolha a casa pra jogar:");
     
     do {
       int casa_jogada;
@@ -232,7 +232,7 @@ int main()
     printf(" █ %c █ %c █ %c █ %c █\n", tabuleiro2[3][0], tabuleiro2[3][1], tabuleiro2[3][2], tabuleiro2[3][3]);
     printf(" █▄▄▄█▄▄▄█▄▄▄█▄▄▄█\n");
 
-    printf("\nEscolha as casas pra jogar:");
+    printf("\nEscolha a casa pra jogar:");
     
     do {
       int casa_jogada;
@@ -369,7 +369,7 @@ int main()
     printf(" █ %c █ %c █ %c █ %c █ %c █\n", tabuleiro3[4][0], tabuleiro3[4][1], tabuleiro3[4][2], tabuleiro3[4][3], tabuleiro3[4][4]);
     printf(" █▄▄▄█▄▄▄█▄▄▄█▄▄▄█▄▄▄█\n");
 
-    printf("\nEscolha as casas pra jogar:");
+    printf("\nEscolha a casa pra jogar:");
     
     do {
       int casa_jogada;
