@@ -502,7 +502,7 @@ int main()
     break;
     
     default:
-      printf("opção inválida");
+      printf("\nOpção inválida");
     break;
     
   }
