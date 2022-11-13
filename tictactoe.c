@@ -56,15 +56,16 @@ int main()
   printf("    ██      ██████  ████████\n" color_reset);
   printf("\n");
 
-  int menu_principal = 0;
+  char menu_principal = '0';
 
   do {
+    
     printf("\n");
     printf("[1] - Jogar\n");
     printf("[2] - Creditos\n");
-    scanf("%d", &menu_principal);
+    scanf("%s", &menu_principal);
 
-    if(menu_principal == 2){
+    if(menu_principal == '2'){
       system ("clear");
       printf("####################################\n");
       printf("|                                  |\n");
@@ -77,11 +78,13 @@ int main()
       printf("|                                  |\n");
       printf("####################################\n");
     }
-    else {
+    else if(menu_principal != '2' || '1'){
+      system("clear");
+      
       puts(color_red"\nERRO!"color_reset);
     }
-  
-  } while (menu_principal != 1);
+     
+  } while (menu_principal != '1');
 
   
   int menu_dificuldade;
