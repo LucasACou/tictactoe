@@ -34,7 +34,7 @@ do{
         }
 
     }
-}while(jogar_denovo == 'y');
+  }while(jogar_denovo == 'y');
 
 
 

@@ -88,10 +88,8 @@ int main()
 
   
   char menu_dificuldade;
-  system ("clear");
-  
   do{
-  
+  system ("clear");
   printf("\n");
   printf("[1] - 3x3\n");
   printf("[2] - 4x4\n");
@@ -558,8 +556,8 @@ int main()
     break;
     
     default:
-      
-      printf(color_red"\nOpção inválida!\n"color_reset);
+      system("clear");
+      printf(color_red"\nOpção inválida!"color_reset);
       fim_de_jogo = 0;
     break;
     

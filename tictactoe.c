@@ -81,23 +81,24 @@ int main()
     else if(menu_principal != '2' || menu_principal != '1'){
       system("clear");
       
-      puts(color_red"\nERRO!"color_reset);
+      puts(color_red"\nOpção inválida!"color_reset);
     }
      
   } while (menu_principal != '1');
 
   
-  int menu_dificuldade;
-  
+  char menu_dificuldade;
   system ("clear");
+  
+  do{
   printf("\n");
   printf("[1] - 3x3\n");
   printf("[2] - 4x4\n");
   printf("[3] - 5x5\n>");
-  scanf("%d", &menu_dificuldade);
+  scanf("%s", &menu_dificuldade);
 
   switch(menu_dificuldade){
-    case 1:
+    case '1':
       do {
     system("clear");
 
@@ -236,7 +237,7 @@ int main()
     break;
 
     
-    case 2:
+    case '2':
           do {
     system("clear");
 
@@ -389,7 +390,7 @@ int main()
     break;
 
     
-    case 3:
+    case '3':
             do {
     system("clear");
 
@@ -556,11 +557,13 @@ int main()
     break;
     
     default:
-      printf("\nOpção inválida");
+      system("clear");
+      puts(color_red"\nOpção inválida!"color_reset);
+      fim_de_jogo = 0;
     break;
     
   }
-
+}while(fim_de_jogo == 0);
   
   return 0;
 }
