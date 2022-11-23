@@ -8,7 +8,9 @@
 
 int main()
 {
-  
+  char casa_jogadachar;
+  int casa_jogadaint;
+  int jogada_inexistente = 0;
   int fim_de_jogo = 0;
   int jogadas = 1;
   int linha, coluna;
@@ -81,7 +83,7 @@ int main()
     else if(menu_principal != '2' || menu_principal != '1'){
       system("clear");
       
-      puts(color_red"\nERRO!"color_reset);
+      puts(color_red"\nOpção inválida!"color_reset);
     }
      
   } while (menu_principal != '1');
@@ -117,11 +119,22 @@ int main()
     printf("\nEscolha a casa pra jogar:\n>");
     
     do {
-      int casa_jogada;
-      scanf("%d", &casa_jogada);
-        casa_jogada = casa_jogada - 1;
-        linha = casa_jogada/3;
-        coluna = casa_jogada%3;
+    
+      do{ 
+        scanf("%s", &casa_jogadachar);
+          if(casa_jogadachar >= '1' && casa_jogadachar <= '9'){
+            casa_jogadaint = casa_jogadachar - '0';
+            jogada_inexistente = 1;
+          }
+          else{
+            printf("\nCasa inesxistente, escolha outra:\n>");
+            jogada_inexistente = 0;
+        }
+      }while(jogada_inexistente == 0);
+      
+        casa_jogadaint = casa_jogadaint - 1;
+        linha = casa_jogadaint/3;
+        coluna = casa_jogadaint%3;
       
       if(tabuleiro[linha][coluna] == 'x' || tabuleiro[linha][coluna] == 'o') {
         printf("\nCasa ja ocupada, escolha outra casa:\n>");
@@ -231,6 +244,7 @@ int main()
             tabuleiro[k][l] = ' ';
           }
         }
+        break;
       }
     }
         
@@ -384,6 +398,7 @@ int main()
             tabuleiro2[k][l] = ' ';
           }
         }
+        break;
       }
     }
             
@@ -551,6 +566,7 @@ int main()
             tabuleiro3[k][l] = ' ';
           }
         }
+        break;
       }
     }              
         
@@ -558,8 +574,8 @@ int main()
     break;
     
     default:
-      
-      printf(color_red"\nOpção inválida!\n"color_reset);
+      system("clear");
+      puts(color_red"\nOpção inválida!"color_reset);
       fim_de_jogo = 0;
     break;
     
