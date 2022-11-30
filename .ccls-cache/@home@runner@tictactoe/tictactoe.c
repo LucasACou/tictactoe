@@ -522,7 +522,7 @@ int main()
     printf(" █ %c █ %c █ %c █ %c █ %c █       21 | 22 | 23 | 24 | 25\n", tabuleiro3[4][0], tabuleiro3[4][1], tabuleiro3[4][2], tabuleiro3[4][3], tabuleiro3[4][4]);
     printf(" █▄▄▄█▄▄▄█▄▄▄█▄▄▄█▄▄▄█          |    |    |    |\n");
 
-    printf("\nEscolha a casa pra jogar:\n>");
+    printf("\nEscolha a casa pra jogar:\n");
 
     
     if(tabuleiro3[0][0]=='x' && tabuleiro3[0][1]== 'x' && tabuleiro3[0][2] == 'x' && tabuleiro3[0][3] == 'x' && tabuleiro3[0][4] == 'x'){
