@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include<string.h>
 // define as cores
 #define color_red "\e[0;31m"
 #define color_purple "\e[0;35m"
@@ -8,7 +9,7 @@
 
 int main()
 {
-  char casa_jogadachar;
+  char casa_jogadachar[3] = {'\0','\0','\0'};
   int casa_jogadaint;
   int jogada_inexistente = 0;
   int fim_de_jogo = 0;
@@ -121,9 +122,9 @@ int main()
     do {
     
       do{ 
-        scanf("%s", &casa_jogadachar);
-          if(casa_jogadachar >= '1' && casa_jogadachar <= '9'){
-            casa_jogadaint = casa_jogadachar - '0';
+        scanf("%s", casa_jogadachar);
+          if(casa_jogadachar[0] >= '1' && casa_jogadachar[0] <= '9'){
+            casa_jogadaint = casa_jogadachar[0] - '0';
             jogada_inexistente = 1;
           }
           else{
@@ -157,7 +158,7 @@ int main()
       jogadas = 1;
     }
 
-
+  
 
     
     if(tabuleiro[0][0]=='x' && tabuleiro[0][1]== 'x' && tabuleiro[0][2] == 'x'){
@@ -231,7 +232,7 @@ int main()
 
     if(fim_de_jogo == 1) {
       int jogar_novamente = 0;
-      printf("Deseja jogar novamente?\n");
+      printf("\nDeseja jogar novamente?\n");
       printf("[1] - sim\n");
       printf("[2] - nao\n>");
       scanf("%d", &jogar_novamente);
@@ -269,17 +270,28 @@ int main()
     printf(" █ %c █ %c █ %c █ %c █       13 | 14 | 15 | 16\n", tabuleiro2[3][0], tabuleiro2[3][1], tabuleiro2[3][2], tabuleiro2[3][3]);
     printf(" █▄▄▄█▄▄▄█▄▄▄█▄▄▄█          |    |    |\n");
 
-    printf("\nEscolha a casa pra jogar:");
+    printf("\nEscolha a casa pra jogar:\n>");
     
     do {
-      int casa_jogada;
-      scanf("%d", &casa_jogada);
-        casa_jogada = casa_jogada - 1;
-        linha = casa_jogada/4;
-        coluna = casa_jogada%4;
+      
+      do {
+        scanf("%s", casa_jogadachar);
+        casa_jogadaint = atoi(casa_jogadachar);
+        if(casa_jogadaint >= 1 && casa_jogadaint <= 16){
+          jogada_inexistente = 1;
+        }
+        else{
+          printf("\nCasa inesxistente, escolha outra:\n>");
+          jogada_inexistente = 0;
+        }
+      }while (jogada_inexistente == 0);
+      
+        casa_jogadaint = casa_jogadaint - 1;
+        linha = casa_jogadaint / 4;
+        coluna = casa_jogadaint % 4;
       
       if(tabuleiro2[linha][coluna] == 'x' || tabuleiro2[linha][coluna] == 'o') {
-        printf("\nCasa ja ocupada, escolha outra casa:");
+        printf("\nCasa ja ocupada, escolha outra casa:\n>");
       }
     }while (tabuleiro2[linha][coluna] == 'x' || tabuleiro2[linha][coluna] == 'o');
 
@@ -379,13 +391,13 @@ int main()
         }
       }
       if(todos_preenchidos == 1 && fim_de_jogo == 0){
-        printf("deu velha");
+        printf("\ndeu velha\n");
         fim_de_jogo = 1;
       }
             
     if(fim_de_jogo == 1) {
       int jogar_novamente = 0;
-      printf("Deseja jogar novamente?\n");
+      printf("\nDeseja jogar novamente?\n");
       printf("[1] - sim\n");
       printf("[2] - nao\n>");
       scanf("%d", &jogar_novamente);
@@ -425,17 +437,27 @@ int main()
     printf(" █ %c █ %c █ %c █ %c █ %c █       21 | 22 | 23 | 24 | 25\n", tabuleiro3[4][0], tabuleiro3[4][1], tabuleiro3[4][2], tabuleiro3[4][3], tabuleiro3[4][4]);
     printf(" █▄▄▄█▄▄▄█▄▄▄█▄▄▄█▄▄▄█          |    |    |    |\n");
 
-    printf("\nEscolha a casa pra jogar:");
+    printf("\nEscolha a casa pra jogar:\n>");
     
     do {
-      int casa_jogada;
-      scanf("%d", &casa_jogada);
-        casa_jogada = casa_jogada - 1;
-        linha = casa_jogada/5;
-        coluna = casa_jogada%5;
+      do {
+        scanf("%s", casa_jogadachar);
+        casa_jogadaint = atoi(casa_jogadachar);
+        if(casa_jogadaint >= 1 && casa_jogadaint <= 25){
+          jogada_inexistente = 1;
+        }
+        else{
+          printf("\nCasa inesxistente, escolha outra:\n>");
+          jogada_inexistente = 0;
+        }
+      }while (jogada_inexistente == 0);
+      
+        casa_jogadaint = casa_jogadaint - 1;
+        linha = casa_jogadaint / 5;
+        coluna = casa_jogadaint % 5;
       
       if(tabuleiro3[linha][coluna] == 'x' || tabuleiro3[linha][coluna] == 'o') {
-        printf("\nCasa ja ocupada, escolha outra casa:");
+        printf("\nCasa ja ocupada, escolha outra casa:\n>");
       }
     }while (tabuleiro3[linha][coluna] == 'x' || tabuleiro3[linha][coluna] == 'o');
 
@@ -547,13 +569,13 @@ int main()
         }
       }
       if(todos_preenchidos == 1 && fim_de_jogo == 0){
-        printf("deu velha");
+        printf("\ndeu velha\n");
         fim_de_jogo = 1;
       }
               
     if(fim_de_jogo == 1) {
       int jogar_novamente = 0;
-      printf("Deseja jogar novamente?\n");
+      printf("\nDeseja jogar novamente?\n");
       printf("[1] - sim\n");
       printf("[2] - nao\n>");
       scanf("%d", &jogar_novamente);
