@@ -157,8 +157,21 @@ int main()
       tabuleiro[linha][coluna] = 'o';
       jogadas = 1;
     }
+        
+      system("clear");
 
-  
+    //tabuleiro
+    
+    printf("\n");
+    printf(" ▄▄▄▄▄▄▄▄▄▄▄▄▄\n");
+    printf(" █ %c █ %c █ %c █       1 | 2 | 3\n", tabuleiro[0][0], tabuleiro[0][1], tabuleiro[0][2]);
+    printf(" █▄▄▄█▄▄▄█▄▄▄█      ___|___|___\n");
+    printf(" █ %c █ %c █ %c █       4 | 5 | 6\n", tabuleiro[1][0], tabuleiro[1][1], tabuleiro[1][2]);
+    printf(" █▄▄▄█▄▄▄█▄▄▄█      ___|___|___\n");
+    printf(" █ %c █ %c █ %c █       7 | 8 | 9\n", tabuleiro[2][0], tabuleiro[2][1], tabuleiro[2][2]);
+    printf(" █▄▄▄█▄▄▄█▄▄▄█         |   |\n");
+
+    printf("\nEscolha a casa pra jogar:\n");
 
     
     if(tabuleiro[0][0]=='x' && tabuleiro[0][1]== 'x' && tabuleiro[0][2] == 'x'){
@@ -311,7 +324,22 @@ int main()
       jogadas = 1;
     }
 
+    system("clear");
 
+    //tabuleiro2
+    
+    printf("\n");
+    printf(" ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n");
+    printf(" █ %c █ %c █ %c █ %c █        1 |  2 |  3 |  4\n", tabuleiro2[0][0], tabuleiro2[0][1], tabuleiro2[0][2], tabuleiro2[0][3]);
+    printf(" █▄▄▄█▄▄▄█▄▄▄█▄▄▄█      ____|____|____|____\n");
+    printf(" █ %c █ %c █ %c █ %c █        5 |  6 |  7 |  8\n", tabuleiro2[1][0], tabuleiro2[1][1], tabuleiro2[1][2], tabuleiro2[1][3]);
+    printf(" █▄▄▄█▄▄▄█▄▄▄█▄▄▄█      ____|____|____|____\n");
+    printf(" █ %c █ %c █ %c █ %c █        9 | 10 | 11 | 12\n", tabuleiro2[2][0], tabuleiro2[2][1], tabuleiro2[2][2], tabuleiro2[2][3]);
+    printf(" █▄▄▄█▄▄▄█▄▄▄█▄▄▄█      ____|____|____|____\n");
+    printf(" █ %c █ %c █ %c █ %c █       13 | 14 | 15 | 16\n", tabuleiro2[3][0], tabuleiro2[3][1], tabuleiro2[3][2], tabuleiro2[3][3]);
+    printf(" █▄▄▄█▄▄▄█▄▄▄█▄▄▄█          |    |    |\n");
+
+    printf("\nEscolha a casa pra jogar:\n");
 
     
     if(tabuleiro2[0][0]=='x' && tabuleiro2[0][1]== 'x' && tabuleiro2[0][2] == 'x' && tabuleiro2[0][3] == 'x'){
@@ -477,7 +505,24 @@ int main()
       jogadas = 1;
     }
 
+    system("clear");
 
+    //tabuleiro3
+    
+    printf("\n");
+    printf(" ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n");
+    printf(" █ %c █ %c █ %c █ %c █ %c █        1 |  2 |  3 |  4 |  5\n", tabuleiro3[0][0], tabuleiro3[0][1], tabuleiro3[0][2], tabuleiro3[0][3], tabuleiro3[0][4]);
+    printf(" █▄▄▄█▄▄▄█▄▄▄█▄▄▄█▄▄▄█      ____|____|____|____|____\n");
+    printf(" █ %c █ %c █ %c █ %c █ %c █        6 |  7 |  8 |  9 | 10\n", tabuleiro3[1][0], tabuleiro3[1][1], tabuleiro3[1][2], tabuleiro3[1][3], tabuleiro3[1][4]);
+    printf(" █▄▄▄█▄▄▄█▄▄▄█▄▄▄█▄▄▄█      ____|____|____|____|____\n");
+    printf(" █ %c █ %c █ %c █ %c █ %c █       11 | 12 | 13 | 14 | 15\n", tabuleiro3[2][0], tabuleiro3[2][1], tabuleiro3[2][2], tabuleiro3[2][3], tabuleiro3[2][4]);
+    printf(" █▄▄▄█▄▄▄█▄▄▄█▄▄▄█▄▄▄█      ____|____|____|____|____\n");
+    printf(" █ %c █ %c █ %c █ %c █ %c █       16 | 17 | 18 | 19 | 20\n", tabuleiro3[3][0], tabuleiro3[3][1], tabuleiro3[3][2], tabuleiro3[3][3], tabuleiro3[3][4]);
+    printf(" █▄▄▄█▄▄▄█▄▄▄█▄▄▄█▄▄▄█      ____|____|____|____|____\n");
+    printf(" █ %c █ %c █ %c █ %c █ %c █       21 | 22 | 23 | 24 | 25\n", tabuleiro3[4][0], tabuleiro3[4][1], tabuleiro3[4][2], tabuleiro3[4][3], tabuleiro3[4][4]);
+    printf(" █▄▄▄█▄▄▄█▄▄▄█▄▄▄█▄▄▄█          |    |    |    |\n");
+
+    printf("\nEscolha a casa pra jogar:\n");
 
     
     if(tabuleiro3[0][0]=='x' && tabuleiro3[0][1]== 'x' && tabuleiro3[0][2] == 'x' && tabuleiro3[0][3] == 'x' && tabuleiro3[0][4] == 'x'){
