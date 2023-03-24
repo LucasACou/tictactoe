@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include<string.h>
+#include <string.h>
 // define as cores
 #define color_red "\e[0;31m"
 #define color_purple "\e[0;35m"
