@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 // define as cores
+//ola
 #define color_red "\e[0;31m"
 #define color_purple "\e[0;35m"
 #define color_cyan "\e[0;36m"
